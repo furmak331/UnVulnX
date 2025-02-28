@@ -21,7 +21,7 @@ Exploitohorizon is a modular, gamified cybersecurity training platform that lets
 ## Getting Started
 
 1. **Clone the Repo:**  
-   `git clone https://github.com/yourusername/exploitohorizon.git`
+   `git clone https://github.com/furmak331/exploitohorizon.git`
 2. **Set Up Containers:**  
    Run the provided setup scripts to launch your isolated lab environment.
 3. **Start Exploring:**  
