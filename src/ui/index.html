@@ -4,14 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploitohorizon Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Exploitohorizon</h1>
-    <p>Select a challenge to begin:</p>
-    <ul>
-        <li><a href="challenges/sql_injection/index.php">SQL Injection Challenge</a></li>
-        <li><a href="challenges/xss/index.php">XSS Challenge</a></li>
-    </ul>
+    <header>
+        <div class="logo-container">
+            <h1>Exploitohorizon</h1>
+            <p class="tagline">Dive into the cyber frontier</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Challenges</a></li>
+                <li><a href="docs/index.html">Documentation</a></li>
+                <li><a href="docs/getting_started.html">Getting Started</a></li>
+                <li><a href="https://github.com/yourusername/exploitohorizon" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Welcome to Exploitohorizon</h2>
+            <p>A modular, gamified cybersecurity training platform. Practice your skills in a safe, containerized environment.</p>
+        </section>
+        
+        <section class="challenges">
+            <h2>Available Challenges</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <div class="challenge-badge beginner">Beginner</div>
+                    <h3>SQL Injection</h3>
+                    <p>Exploit a vulnerable user lookup system by injecting SQL code.</p>
+                    <div class="challenge-footer">
+                        <a href="challenges/sql_injection/index.php" class="challenge-button">Start Challenge</a>
+                        <a href="challenges/sql_injection/challenge.md" class="docs-link">Documentation</a>
+                    </div>
+                </div>
+                
+                <div class="challenge-card">
+                    <div class="challenge-badge beginner">Beginner</div>
+                    <h3>Cross-Site Scripting (XSS)</h3>
+                    <p>Inject and execute malicious JavaScript in a vulnerable message board.</p>
+                    <div class="challenge-footer">
+                        <a href="challenges/xss/index.php" class="challenge-button">Start Challenge</a>
+                        <a href="challenges/xss/challenge.md" class="docs-link">Documentation</a>
+                    </div>
+                </div>
+                
+                <div class="challenge-card coming-soon">
+                    <div class="challenge-badge intermediate">Intermediate</div>
+                    <h3>Broken Authentication</h3>
+                    <p>Bypass authentication mechanisms in a flawed login system.</p>
+                    <div class="challenge-footer">
+                        <span class="coming-soon-text">Coming Soon</span>
+                    </div>
+                </div>
+                
+                <div class="challenge-card coming-soon">
+                    <div class="challenge-badge advanced">Advanced</div>
+                    <h3>Command Injection</h3>
+                    <p>Execute unauthorized commands on a vulnerable server.</p>
+                    <div class="challenge-footer">
+                        <span class="coming-soon-text">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="getting-started">
+            <h2>New to Exploitohorizon?</h2>
+            <p>Get started with our comprehensive guide to set up your environment and begin your cybersecurity journey.</p>
+            <a href="docs/getting_started.html" class="button">Getting Started Guide</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Exploitohorizon. For educational purposes only.</p>
+        <p>Created with <span class="heart">♥</span> for the cybersecurity community.</p>
+    </footer>
 </body>
 </html>

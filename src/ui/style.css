@@ -1,0 +1,288 @@
+/* Base styles */
+:root {
+    --primary-color: #4a2f8c;
+    --secondary-color: #724cf9;
+    --accent-color: #ea3546;
+    --dark-color: #1e1e2c;
+    --light-color: #f4f4f8;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --text-color: #333;
+    --text-light: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.button, button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover, button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Header styles */
+header {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    opacity: 1;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem 5%;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* Challenge styles */
+.challenges {
+    padding: 2rem 0;
+}
+
+.challenges h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.challenge-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.challenge-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+.beginner {
+    background-color: var(--success-color);
+}
+
+.intermediate {
+    background-color: var(--warning-color);
+    color: var(--dark-color);
+}
+
+.advanced {
+    background-color: var(--danger-color);
+}
+
+.challenge-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.3rem;
+}
+
+.challenge-card p {
+    padding: 0 1.5rem;
+    color: var(--text-light);
+    flex-grow: 1;
+}
+
+.challenge-footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.challenge-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.challenge-button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.docs-link {
+    font-size: 0.9rem;
+}
+
+.coming-soon {
+    opacity: 0.7;
+}
+
+.coming-soon-text {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* Getting started section */
+.getting-started {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.getting-started h2 {
+    margin-bottom: 1rem;
+}
+
+.getting-started p {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.getting-started .button {
+    background-color: var(--accent-color);
+}
+
+.getting-started .button:hover {
+    background-color: #ff4555;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.heart {
+    color: var(--accent-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem;
+    }
+    
+    .challenge-grid {
+        grid-template-columns: 1fr;
+    }
+}
