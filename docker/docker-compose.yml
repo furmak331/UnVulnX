@@ -1,15 +1,47 @@
-version: '3'
+version: '3.8'
 services:
   web:
-    build: .
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: exploitohorizon-web
     ports:
-      - "80:80"
+      - "8080:80"  # Changed to non-standard port for security
     volumes:
-      - .:/var/www/html
+      - ./challenges:/var/www/html/challenges
+      - ./src:/var/www/html/src
+    depends_on:
+      - db
+    networks:
+      - frontend
+      - backend
+    restart: unless-stopped
+    environment:
+      - APP_ENV=development
+      
   db:
     image: mysql:5.7
+    container_name: exploitohorizon-db
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: dvwa
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD:-root}"
+      MYSQL_DATABASE: "${DB_NAME:-dvwa}"
+      MYSQL_USER: "${DB_USER:-dvwa}"
+      MYSQL_PASSWORD: "${DB_PASSWORD:-dvwapassword}"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
     ports:
       - "3307:3306"
+    networks:
+      - backend
+    restart: unless-stopped
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+    internal: true  # Backend network is not accessible from host
+
+volumes:
+  mysql_data:
