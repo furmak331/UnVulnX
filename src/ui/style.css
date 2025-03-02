@@ -1,15 +1,12 @@
 /* Base styles */
 :root {
-    --primary-color: #4a2f8c;
-    --secondary-color: #724cf9;
-    --accent-color: #ea3546;
-    --dark-color: #1e1e2c;
-    --light-color: #f4f4f8;
-    --success-color: #28a745;
-    --warning-color: #ffc107;
-    --danger-color: #dc3545;
-    --text-color: #333;
-    --text-light: #666;
+    --primary-color: #6200ea; /* Deeper purple */
+    --secondary-color: #9d46ff; /* Brighter purple */
+    --accent-color: #ff4757; /* Vibrant red */
+    --dark-color: #151522; /* Darker background */
+    --light-color: #f7f7ff; /* Slightly warmer white */
+    --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --card-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 * {
